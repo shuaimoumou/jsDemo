@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制DIV属性</title>
+    <style>
+        .firstDiv{
+            width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .btnArea{
+            height: 50px;
+        }
+        button{
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .divPal{
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="firstDiv">
+        <div class="btnArea">
+            <button id="changeWidth">变宽</button>
+            <button id="changeHight">变高</button>
+            <button id="changeBg">变色</button>
+            <button id="hidden">隐藏</button>
+            <button id="rest">重置</button>
+        </div>
+        <div class="divPal" id="divPal">
+
+        </div>
+    </div>
+    <script>
+        window.onload=function () {
+            var div  =   document.getElementById("divPal");
+            var btn1 =  document.getElementById("changeWidth");
+            var btn2 =  document.getElementById("changeHight");
+            var btn3 =  document.getElementById("changeBg");
+            var btn4 =  document.getElementById("hidden");
+            var btn5 =  document.getElementById("rest");
+            btn1.onclick=function () {
+                div.style.width="400px";
+            };
+            btn2.onclick=function () {
+                div.style.height="400px";
+            };
+            btn3.onclick=function () {
+                div.style.background="green";
+            };
+            btn4.onclick=function () {
+                div.style.display="none";
+            };
+            btn5.onclick=function () {
+                var styles={
+                    width: "200px",
+                    height: "200px",
+                    margin: "auto",
+                    background: "red"
+                };
+                div.style=styles;
+            }
+
+        }
+    </script>
+</body>
+</html>
